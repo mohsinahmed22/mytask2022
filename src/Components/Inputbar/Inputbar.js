@@ -1,13 +1,22 @@
 import React from "react";
-import { FiAlignLeft } from 'react-icons/fi';
+import './Inputbar.css';
+import { FiAlignLeft, FiPlus } from 'react-icons/fi';
 
 const Inputbar = () => {
     return (
         <>
-           <FiAlignLeft /> test 
+            <div className="inputSection">
+                <FiAlignLeft size="26"/>  
+                <input placeholder="Please Add Task" />
+                <button title="Add">
+                    <FiPlus size="26"/>
+                </button>
+            </div>
+           
         </> 
     );
 };
+
 
 
 export default Inputbar;
