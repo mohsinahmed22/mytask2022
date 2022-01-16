@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import "./Assests/Css/responsive.css";
 
-import { DataContext, DataProvider } from "./Context/Context";
+import { DataProvider } from "./Context/Context";
 
 import Inputbar from "./Components/Inputbar/Inputbar";
 import TaskList from "./Components/List/List";

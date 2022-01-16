@@ -10,12 +10,13 @@
 .viewMode span {
   padding: 0 20px;
   border-radius: 20px;
-  transition: background 0.3s linear;
+  color: #777;
+  transition: all 0.3s linear;
 }
-.active {
-  background: #eee;
-
-  transition: background 0.3s linear;
+.viewMode span.active {
+  background: rgb(0, 83, 192);
+  color: #fff;
+  transition: all 0.3s linear;
 }
 
 .ListItems {
@@ -80,5 +81,10 @@
     margin-bottom: 5px;
     border-radius: 6px;
   }
-  
+  .DeletedTask,
+  .CompletedTask {
+    right: -11px;
+    bottom: -5px;
+    padding: 15px;
+  }
 }

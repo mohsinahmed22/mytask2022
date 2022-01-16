@@ -9,25 +9,26 @@ const List = () => {
   const [View, setView] = useState(["Task To Do"]);
 
   useEffect(() => {
-    console.log(Tasks);
-  }, [View]);
+    setView(View);
+  }, []);
+
   return (
     <>
       <div className="viewMode">
         <span
-          className={View == "Task To Do" ? "active" : ""}
+          className={View === "Task To Do" ? "active" : ""}
           onClick={() => setView("Task To Do")}
         >
           UnDone
         </span>
         <span
-          className={View == "completed" ? "active" : ""}
+          className={View === "completed" ? "active" : ""}
           onClick={() => setView("completed")}
         >
           Completed
         </span>
         <span
-          className={View == "deleted" ? "active" : ""}
+          className={View === "deleted" ? "active" : ""}
           onClick={() => {
             setView("deleted");
           }}
@@ -36,7 +37,7 @@ const List = () => {
         </span>
       </div>
       <div className="ListItems">
-        {Tasks.filter((item) => item.TaskStatus == View).map(
+        {Tasks.filter((item) => item.TaskStatus === View).map(
           (filterItem, index) => {
             return (
               <ItemList
