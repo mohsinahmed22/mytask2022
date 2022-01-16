@@ -1,0 +1,42 @@
+.inputSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputSection input {
+  flex: 1;
+  margin: 0 13px;
+  border: none;
+  font-size: 22px;
+}
+.inputSection input:focus {
+  outline: none !important;
+}
+.add-btn:hover {
+  background: #222;
+  transition: background 0.2s ease-out;
+}
+.add-btn:active {
+  background: black;
+  transition: background 0.2s ease-out;
+}
+.add-btn {
+  border: none;
+  border-radius: 10px;
+  background: #444;
+  color: #fff;
+  transition: background 0.2s ease-out;
+}
+
+.add-btn svg {
+  margin-top: 4px;
+}
+
+@media screen and (max-width: 560px) {
+  .inputSection input {
+    width: 10%;
+    font-size: 16px;
+    padding: 5px;
+  }
+}

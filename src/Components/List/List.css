@@ -1,0 +1,84 @@
+.viewMode {
+  background: #fff;
+  width: 40%;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 15px;
+}
+.viewMode span {
+  padding: 0 20px;
+  border-radius: 20px;
+  transition: background 0.3s linear;
+}
+.active {
+  background: #eee;
+
+  transition: background 0.3s linear;
+}
+
+.ListItems {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.ListItem {
+  padding: 15px;
+  background: #fff;
+  width: 20%;
+  border-radius: 15px;
+  box-shadow: 3px 3px 2px #ddd;
+  text-align: left;
+  height: 70px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  animation: slideOut 0.5s ease-in-out;
+}
+.deleteTask {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: #999;
+}
+
+.DeletedTask,
+.CompletedTask {
+  position: absolute;
+  right: -3px;
+  bottom: -7px;
+  color: #fff;
+  /* background: red; */
+  padding: 13px;
+  border-radius: 30px;
+  width: 23px;
+  height: 23px;
+  font-weight: bold;
+}
+.CompletedTask {
+  background: green;
+}
+.DeletedTask {
+  background: red;
+}
+
+@media screen and (max-width: 560px) {
+  .viewMode {
+    width: 80%;
+  }
+  .viewMode span {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  .ListItem {
+    width: 85%;
+    height: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+  }
+  
+}

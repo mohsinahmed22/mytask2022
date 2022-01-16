@@ -1,12 +1,27 @@
-import React from "react";
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import "./Assests/Css/responsive.css";
+
+import { DataContext, DataProvider } from "./Context/Context";
+
 import Inputbar from "./Components/Inputbar/Inputbar";
+import TaskList from "./Components/List/List";
+
 function App() {
   return (
-    <div className="App">
-        <Inputbar />
-    </div>
+    <DataProvider>
+      <div className="App">
+        <div className="container-wrapper">
+          <h1>My Task List</h1>
+          <div className="container">
+            <Inputbar />
+          </div>
+          <div className="taskList">
+            <TaskList />
+          </div>
+        </div>
+      </div>
+    </DataProvider>
   );
 }
 
