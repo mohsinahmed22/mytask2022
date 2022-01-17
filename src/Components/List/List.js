@@ -6,7 +6,7 @@ import { DataContext } from "../../Context/Context";
 
 const List = () => {
   const { Tasks, UpdateStatus } = useContext(DataContext);
-  const [View, setView] = useState(["Task To Do"]);
+  const [View, setView] = useState("Task To Do");
 
   useEffect(() => {
     setView(View);
