@@ -1,15 +1,10 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
-  const TaskArr = [
-    // {
-    //   TaskName: "",
-    //   TaskId: 0,
-    //   TaskStatus: "",
-    // },
-  ];
+  const TaskArr = [];
+  useEffect(() => {}, []);
   const [Tasks, setTask] = useState(TaskArr);
   const AddTask = (newTask) => {
     setTask([...Tasks, newTask]);

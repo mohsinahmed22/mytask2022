@@ -1,11 +1,21 @@
 .viewMode {
   background: #fff;
   width: 40%;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
   border-radius: 15px;
+  position: relative;
+}
+.viewMode::after {
+  content: "To mark as completed just click on task";
+  position: absolute;
+  font-size: 12px;
+  color: #444;
+  bottom: -22px;
+  left: 0;
+  right: 0;
 }
 .viewMode span {
   padding: 0 20px;
